@@ -6,3 +6,9 @@ Should work for multiplex proxy/node services, as well as auth services with etc
 
 If other services are not working, probably port definiotions are missing from selinux policy.
 In that case either use semanage to add port, or add port to rpm by editing cil file.
+
+
+As SELinux is all about file path, make sure that all references to certificates are on:
+/var/lib/teleport
+
+For multiple config files, use *.pid file in dedicated directory - /var/run/teleport
