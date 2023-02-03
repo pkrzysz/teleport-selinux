@@ -12,3 +12,8 @@ As SELinux is all about file path, make sure that all references to certificates
 /var/lib/teleport
 
 For multiple config files, use *.pid file in dedicated directory - /var/run/teleport
+
+
+on proxy/auth servers nis needs to be enabled:
+
+setsebool -P nis_enabled 1
